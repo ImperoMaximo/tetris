@@ -1,7 +1,10 @@
 #ifndef TETROMINO
 #define TETROMINO
 
-// #include "point.h"
+#include <string>
+
+using namespace std;
+
 struct Point{
     int x;
     int y;
@@ -9,17 +12,21 @@ struct Point{
 
 class Tetromino{
     protected:
-    int abs_pos, state;
-    Point **pos_register = new Point*[4];
+    int state;
+    string color;
+    Point **shapes = new Point*[4], pos;
+    //pourquoi une donnée de vitesse dans le diagr de classes ?
+
     public:
     Tetromino();
     Tetromino(const Tetromino& T);
     ~Tetromino();
+
     int getState();
     int getAbsPos();
-    void setAbsPos(int i);
-    Tetromino rotate() const;
-    void rotate();
+    Point* getShape();
+    void rotateLeft();
+    void rotateRight();
     Point* operator[](const int i) const;
 };
 #endif
