@@ -1,7 +1,7 @@
-#include "tetromino_Z.h"
+#include "tetromino_Z.hpp"
 
 
-Tetromino_Z::Tetromino_Z() : Tetromino(0, "red", Point(0,0)) {
+Tetromino_Z::Tetromino_Z() : Tetromino(0, "red", Point{}) {
     // définir les coordonnées des cases pour chaque état = rotation
     // on part de langle en haut à gauche pour noter les coordonnées
     // dans un carré de 3x3 cases.

@@ -3,14 +3,9 @@
 
 #include <string>
 #include <iostream>
-#include "cell.h"
+#include "cell.hpp"
 
 using namespace std;
-
-struct Point{
-    int x;
-    int y;
-};
 
 class Playfield {
     private:
@@ -18,13 +13,12 @@ class Playfield {
     Cell ***grid;
 
     public:
-    Playfield(int w, int h);
+    Playfield(int w = 10, int h = 20);
     ~Playfield();
 
     Cell* getCell(Point pos);
     void setCell(Point pos, Cell* cell);
-    int eraseFullRows();
+    void eraseFullRow(int row_y);
     void display();
-
 };
 #endif

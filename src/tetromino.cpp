@@ -1,8 +1,8 @@
-#include "tetromino.h"
+#include "tetromino.hpp"
 
-Tetromino::Tetromino(int state, string color, Point pos) : pos(pos), state(state), color(color), shapes{} {}
+Tetromino::Tetromino(int state, string color, Point pos) : state(state), color(color), shapes{}, pos(pos) {}
 
-Tetromino::Tetromino(const Tetromino &T) : pos(T.pos), state(T.state), shapes(T.shapes), color(T.color) {}
+Tetromino::Tetromino(const Tetromino &T) : state(T.state), color(T.color), shapes(T.shapes), pos(T.pos) {}
 
 int Tetromino::getState() { return state; }
 

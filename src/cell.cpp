@@ -1,4 +1,4 @@
-#include "cell.h"
+#include "cell.hpp"
 
 Cell::Cell(Point pos, bool t, string colour) : pos(pos), taken(t), color(colour) {}
 

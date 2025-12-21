@@ -4,8 +4,9 @@ RM  := rm -f
 MKDIR := mkdir -p
 
 # Directories
-SRC_DIRS := . tetrominos
+SRC_DIRS := src src/tetrominos
 BUILD_DIR := build
+
 
 # Binary
 BIN := tetris
@@ -20,7 +21,7 @@ RELEASE_FLAGS := -O2 -DNDEBUG
 # -------------------------------------------------------------------
 # Automatic source discovery
 # -------------------------------------------------------------------
-SRCS := $(foreach d,$(SRC_DIRS),$(wildcard $(d)/*.cpp))
+SRCS := main.cpp $(foreach d,$(SRC_DIRS),$(wildcard $(d)/*.cpp))
 
 # Convert src paths into build/xxx.o
 OBJS := $(patsubst %.cpp,$(BUILD_DIR)/%.o,$(SRCS))

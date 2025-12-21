@@ -2,6 +2,8 @@
 *.o
 *.exe
 *.out
+tetris
+#tetris est le fichier executable généré
 
 build/
 

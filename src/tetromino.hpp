@@ -16,7 +16,7 @@ class Tetromino{
     //pourquoi une donnée de vitesse dans le diagr de classes ?
 
     public:
-    Tetromino(int state=0, string color="grey", Point pos=Point(0,0));
+    Tetromino(int state=0, string color="grey", Point pos=Point{});
     Tetromino(const Tetromino& T);
 
     int getState();
