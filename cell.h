@@ -2,13 +2,9 @@
 #define CELL
 
 #include <string>
+#include "point.hpp"
 
 using namespace std;
-
-struct Point{
-    int x;
-    int y;
-};
 
 class Cell {
     private:
@@ -22,7 +18,6 @@ class Cell {
     bool isTaken() const;
     string getColor() const;
     void colonize(string colour);
-    void clear();
-
+    void clear();   //pas sur de l'utilité de cette fonction
 };
 #endif

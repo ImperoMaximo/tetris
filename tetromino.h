@@ -2,31 +2,28 @@
 #define TETROMINO
 
 #include <string>
+#include <array>
+#include "point.hpp"
 
 using namespace std;
-
-struct Point{
-    int x;
-    int y;
-};
 
 class Tetromino{
     protected:
     int state;
     string color;
-    Point **shapes = new Point*[4], pos;
+    array<array<Point,4>,4> shapes;
+    Point pos;
     //pourquoi une donnée de vitesse dans le diagr de classes ?
 
     public:
-    Tetromino();
+    Tetromino(int state=0, string color="grey", Point pos=Point(0,0));
     Tetromino(const Tetromino& T);
-    ~Tetromino();
 
     int getState();
-    int getAbsPos();
-    Point* getShape();
+    Point getPos();
+    void setPos(Point p);
     void rotateLeft();
     void rotateRight();
-    Point* operator[](const int i) const;
+    array<Point,4> operator[](const int i) const;
 };
 #endif

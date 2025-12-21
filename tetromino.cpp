@@ -1,43 +1,17 @@
 #include "tetromino.h"
 
-Tetromino::Tetromino() {
-    abs_pos = 0;
-    state = 0;
-    for(int i =0;i<4;i++) {
-        pos_register[i] = new Point[4];
-        for(int j=0;j<4;j++)
-            pos_register[i][j] = {0,0};
-    }
-}
+Tetromino::Tetromino(int state, string color, Point pos) : pos(pos), state(state), color(color), shapes{} {}
 
-Tetromino::Tetromino(const Tetromino &T) {
-    abs_pos = T.abs_pos;
-    state = T.state;
-    for(int i =0;i<4;i++) {
-        pos_register[i] = new Point[4];
-        for(int j=0;j<4;j++)
-            pos_register[i][j] = T.pos_register[i][j];
-    }
-}
-
-Tetromino::~Tetromino() {
-    for(int i =0;i<4;i++)
-        delete[] pos_register[i];
-    delete[] pos_register;
-}
+Tetromino::Tetromino(const Tetromino &T) : pos(T.pos), state(T.state), shapes(T.shapes), color(T.color) {}
 
 int Tetromino::getState() { return state; }
 
-int Tetromino::getAbsPos() { return abs_pos; }
+Point Tetromino::getPos() { return pos; }
 
-void Tetromino::setAbsPos(int h) { abs_pos = h; }
+void Tetromino::setPos(Point p) { pos = p; }
 
-Tetromino Tetromino::rotate() const {
-    Tetromino temp(*this);
-    temp.state = (temp.state + 1) % 4;
-    return temp;
-}
+void Tetromino::rotateLeft() { state = (state + 3) % 4; }
 
-void Tetromino::rotate() { this->state=(this->state+1) % 4; }
+void Tetromino::rotateRight() { state = (state + 1) % 4; }
 
-Point *Tetromino::operator[](const int i) const { return pos_register[i]; }
+array<Point, 4> Tetromino::operator[](const int i) const { return shapes[i]; }

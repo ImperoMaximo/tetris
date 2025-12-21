@@ -1,0 +1,8 @@
+# Fichiers compilés
+*.o
+*.exe
+*.out
+
+build/
+
+*.vscode/

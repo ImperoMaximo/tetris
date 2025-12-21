@@ -14,6 +14,4 @@ void Cell::colonize(string colour) {
 void Cell::clear() {
     taken = false;
     color = "grey";
-}
-
-//pas sur qu'on ait besoin de clear si on fait juste "descendre" les autres cellules ou non
+}   //pas sur qu'on ait besoin de clear si on fait juste "descendre" les autres cellules ou non
