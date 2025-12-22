@@ -2,6 +2,7 @@
 *.o
 *.exe
 *.out
+*.puml
 tetris
 #tetris est le fichier executable généré
 

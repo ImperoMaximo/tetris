@@ -47,6 +47,7 @@ void Playfield::display() {
             cout << grid[i][j]->getColor()[0];
         cout << "]\n";
     }
-    for(int i=0; i<width; i++)
+    for(int i=0; i<width+2; i++)
         cout<<'-';
+    cout<<'\n';
 }

@@ -1,0 +1,110 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-O2",
+      "-DNDEBUG",
+      "-c",
+      "-o",
+      "build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/maxime-bree/Dev/C++/tetris",
+    "file": "/home/maxime-bree/Dev/C++/tetris/main.cpp",
+    "output": "/home/maxime-bree/Dev/C++/tetris/build/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-O2",
+      "-DNDEBUG",
+      "-c",
+      "-o",
+      "build/src/cell.o",
+      "src/cell.cpp"
+    ],
+    "directory": "/home/maxime-bree/Dev/C++/tetris",
+    "file": "/home/maxime-bree/Dev/C++/tetris/src/cell.cpp",
+    "output": "/home/maxime-bree/Dev/C++/tetris/build/src/cell.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-O2",
+      "-DNDEBUG",
+      "-c",
+      "-o",
+      "build/src/game.o",
+      "src/game.cpp"
+    ],
+    "directory": "/home/maxime-bree/Dev/C++/tetris",
+    "file": "/home/maxime-bree/Dev/C++/tetris/src/game.cpp",
+    "output": "/home/maxime-bree/Dev/C++/tetris/build/src/game.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-O2",
+      "-DNDEBUG",
+      "-c",
+      "-o",
+      "build/src/playfield.o",
+      "src/playfield.cpp"
+    ],
+    "directory": "/home/maxime-bree/Dev/C++/tetris",
+    "file": "/home/maxime-bree/Dev/C++/tetris/src/playfield.cpp",
+    "output": "/home/maxime-bree/Dev/C++/tetris/build/src/playfield.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-O2",
+      "-DNDEBUG",
+      "-c",
+      "-o",
+      "build/src/tetromino.o",
+      "src/tetromino.cpp"
+    ],
+    "directory": "/home/maxime-bree/Dev/C++/tetris",
+    "file": "/home/maxime-bree/Dev/C++/tetris/src/tetromino.cpp",
+    "output": "/home/maxime-bree/Dev/C++/tetris/build/src/tetromino.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-O2",
+      "-DNDEBUG",
+      "-c",
+      "-o",
+      "build/src/tetrominos/tetromino_Z.o",
+      "src/tetrominos/tetromino_Z.cpp"
+    ],
+    "directory": "/home/maxime-bree/Dev/C++/tetris",
+    "file": "/home/maxime-bree/Dev/C++/tetris/src/tetrominos/tetromino_Z.cpp",
+    "output": "/home/maxime-bree/Dev/C++/tetris/build/src/tetrominos/tetromino_Z.o"
+  }
+]
