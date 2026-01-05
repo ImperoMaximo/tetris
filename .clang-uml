@@ -1,44 +1,14 @@
 # Change to directory where compile_commands.json is
 compilation_database_dir: .
-# # Change to directory where diagram should be written
+# Change to directory where diagram should be written
 output_directory: docs
-# diagrams:
-#   classes:
-#     type: class
-#     glob:
-#       - src/**/*.hpp
-#       - src/**/*.cpp
-#       - main.cpp
-#     exclude:
-#       namespaces:
-#         - std
-# compilation_database_dir: .
-
-# Diagrammes à générer
 diagrams:
-  tetris_classes:
+  classes:
     type: class
     glob:
       - src/**/*.hpp
       - src/**/*.cpp
       - main.cpp
-    # Classes importantes seulement
-    include:
-      classes:
-        - Game
-        - Playfield
-        - Cell
-        - Point
-        - Tetromino
-        - Tetromino_.*  # inclut toutes les variantes comme Tetromino_Z
-    # Exclure le reste
     exclude:
       namespaces:
         - std
-      classes:
-        - .*Impl
-    # Paramètres pour rendre le diagramme plus lisible
-    member_order: lexical       # ordonner par nom
-    show_private: false         # cacher les membres privés
-    show_methods: true          # afficher méthodes publiques
-    show_fields: true           # afficher attributs publics

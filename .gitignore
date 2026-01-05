@@ -6,6 +6,8 @@
 tetris
 #tetris est le fichier executable généré
 
+#inutile de garder les exe intermediraires aussi
 build/
 
+#au cas ou on prefere ne pas avoir les fichiers config de l'ide
 *.vscode/
